@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    font-family:'Ubuntu', sans-serif ;
+    scroll-behavior: smooth;
+}
+
+.container{
+    min-height: 100vh;
+    margin-top: 0%;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: row;
+    gap: 5rem;
+    
+}
+#total{
+   background-image: url(./img/back.jpg);
+   background-size: cover;
+   background-position: top center;
+   position: relative;
+}
+#total h1{
+    display: block;
+    width: fit-content;
+    font-size: 14rem;
+    top: 1080px;
+    position: relative;
+    color: rgb(105, 30, 82);
+    
+}
+.aynazimg {
+    width: 900px;
+    height: 900px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 142px;
+}
+
+#total h2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 8rem;
+    background-color: rgba(244, 57, 169, 0.307);
+    padding: 1rem 0;
+    z-index: 1000;
+    color: rgb(105, 30, 82);
+    
+}
+.point-list {
+    direction: ltr;
+    list-style: none;
+    font-size: 10rem;
+    color: rgb(46, 14, 37);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0;
+    margin: 0;
+}
+
+.point-list li {
+    position: relative;
+    padding-left: 6rem; /* space on the LEFT side for the bullet */
+}
+
+/* Bullet Circle on LEFT of each item */
+.point-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;  /* was right: 0 */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: rgb(184, 19, 132);
+}
+
+
+#info-box {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    right: 5rem;
+    transform: translateY(-50%);
+    z-index: 1001;
+    /* remove background and padding */
+    background: none;
+    padding-right: 10px;
+}
+#subject{
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 8rem;
+    transform: translateY(-50%);
+    line-height: 20rem;
+   
+    /* remove background and padding */
+    background: none;
+    padding-right: 10px;
+    direction: ltr;
+    list-style: none;
+    font-size: 9.5rem;
+    color: rgb(46, 14, 37);
+    display: flex;
+    gap: rem;
+    padding: 0;
+    margin: 0;
+    font-weight: normal !important;
+
+
+}
+
+.word-btn {
+    font-weight: bold;
+    background-color: rgb(46, 14, 37);
+    color: #e076bb;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15%;
+    cursor: pointer;
+    font-size: 9.5rem;
+    transition: background-color 0.3s ease;
+    padding: 2rem;
+    /* NEW: glowing shine */
+    box-shadow: 0 0 12px #ec069c, 0 0 20px #ef73dc;
+    animation: glowPulse 1.5s infinite ease-in-out;
+}
+
+
+.word-btn:hover {
+    background-color: #e076bb;
+    color:rgb(46, 14, 37);
+}
+.word-btn:active {
+    animation: buttonTap 0.2s ease;
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 12px #ec069c, 0 0 20px rgb(46, 14, 37);
+    }
+    25% {
+        box-shadow: 0 0 30px #ec069c, 0 0 45px rgb(46, 14, 37);
+    }
+    35% {
+        box-shadow: 0 0 30px #ec069c, 0 0 45px rgb(46, 14, 37);
+    }
+    50% {
+        box-shadow: 0 0 50px #ec069c, 0 0 60px rgb(46, 14, 37);
+    }
+    75% {
+        box-shadow: 0 0 30px #ec069c, 0 0 45px rgb(46, 14, 37);
+    }
+    85% {
+        box-shadow: 0 0 30px #ec069c, 0 0 45px rgb(46, 14, 37);
+    }
+    100% {
+        box-shadow: 0 0 12px #ec069c, 0 0 20px rgb(46, 14, 37);
+    }
+}
+
+@keyframes buttonTap {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.92);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#second-section {
+    min-height: 100vh;
+    background-image: url('./img/back2.png'); /* use your second image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+#second-section {
+    position: relative;
+}
+
+#second-section h2 {
+    display: block;
+    font-size: 14rem;
+    position: absolute; /* key to place it precisely */
+    top: 16rem;
+    left: 8rem;
+    color: rgb(105, 30, 82);
+    margin: 2rem; /* optional: gives some spacing from edges */
+}
+
+#passions{
+    text-align: left;
+    position: absolute;
+    top: 87rem;
+    left: 11rem;
+    transform: translateY(-50%);
+    line-height: 17rem;
+   
+    /* remove background and padding */
+    background: rgba(225, 49, 152, 0.356);
+    
+    padding-right: 10px;
+    direction: ltr;
+    list-style: none;
+    font-size: 9.5rem;
+    color: rgb(46, 14, 37);
+    display: flex;
+    gap: 4rem;
+    padding: 4rem 6rem;
+    margin: 0;
+    font-weight: normal !important;
+    border-radius: 4rem;
+}
+
+#second-section h3 {
+    display: block;
+    font-size: 14rem;
+    position: absolute; /* key to place it precisely */
+    top: 140rem;
+    left: 8rem;
+    color: rgb(105, 30, 82);
+    margin: 2rem; /* optional: gives some spacing from edges */
+}
+#hobbies{
+    text-align: left;
+    position: absolute;
+    top: 197rem;
+    left: 11rem;
+    transform: translateY(-50%);
+    line-height: 17rem;
+   
+    /* remove background and padding */
+    background: rgba(225, 49, 152, 0.356);
+    
+    padding-right: 10px;
+    direction: ltr;
+    list-style: none;
+    font-size: 9.5rem;
+    color: rgb(46, 14, 37);
+    display: flex;
+    gap: 4rem;
+    padding: 4rem 6rem;
+    margin: 0;
+    font-weight: normal !important;
+    border-radius: 4rem;
+    
+}
+.hobbies {
+    direction: ltr;
+    list-style: none;
+    font-size: 10rem;
+    color: rgb(46, 14, 37);
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0;
+    margin: 0;
+}
+
+.hobbies li {
+    position: relative;
+    padding-left: 6rem; /* space on the LEFT side for the bullet */
+}
+
+/* Bullet Circle on LEFT of each item */
+.hobbies li::before {
+    content: '';
+    position: absolute;
+    left: 0;  /* was right: 0 */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: rgb(219, 20, 156);
+}
+section {
+  min-height: 100vh; /* full viewport height */
+  padding: 40px 20px; /* some spacing */
+  box-sizing: border-box;
+}
+
+#third-section {
+    position: relative;
+    min-height: 100vh; /* تا بخش ارتفاع مناسبی داشته باشه */
+}
+
+
+#third-section h1 {
+    position: absolute;
+    top: 16rem;
+    left: 8rem;
+    font-size: 14rem;
+    color: rgb(105, 30, 82);
+}
+
+
+#third-section table {
+  width: 50%;
+  margin: 30px auto 0 auto;
+  font-size: 9rem;
+  color: rgb(46, 14, 37);
+  border-collapse: separate; /* Important for border-radius to work */
+  border-spacing: 0;          /* Removes gaps between cells */
+  top: 30rem;
+  border: 4px solid rgb(162, 28, 115); /* Thicker outer border */
+  border-radius: 80px;              /* Rounder corners */
+  overflow: hidden;           
+  
+  box-shadow: -25px 25px 30px rgba(221, 1, 130, 0.693);/* Ensure radius clips content */
+}
+
+#third-section table th, 
+#third-section table td {
+  border: 3px solid rgb(84, 26, 67); /* Thicker inner borders */
+  padding: 40px 24px;
+  text-align: left;
+}
+
+/* Optional: Remove double borders */
+#third-section table th:first-child {
+  border-left: none;
+}
+#third-section table td:first-child {
+  border-left: none;
+}
+
+
+#third-section {
+    min-height: 100vh;
+    background-image: url('./img/back5.jpg'); /* use your second image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+#exp{
+    text-align: left;
+    position: absolute;
+    top: 60rem;
+    left: 9rem;
+    transform: translateY(-50%);
+    line-height: 17rem;
+   
+    /* remove background and padding */
+    background: rgba(225, 49, 152, 0.356);
+    
+    padding-right: 10px;
+    direction: ltr;
+    list-style: none;
+    font-size: 9rem;
+    color: rgb(46, 14, 37);
+    display: flex;
+    gap: 4rem;
+    padding: 4rem 6rem;
+    margin: 0;
+    font-weight: normal !important;
+    border-radius: 4rem;
+}
+
